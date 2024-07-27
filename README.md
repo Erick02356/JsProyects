@@ -1,7 +1,7 @@
 # JsProyects
 Proyectos prácticos para el aprendizaje de JavaScript
 
-#Proyectos
+# Proyectos
 
 ##  1).Calculadora básica:
 Crea una calculadora sencilla que pueda realizar operaciones matemáticas básicas como suma, resta, multiplicación y división. Esto te ayudará a entender la manipulación del DOM y la lógica básica.
