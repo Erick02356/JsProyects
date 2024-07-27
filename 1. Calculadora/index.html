@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+        <h1>CALCULADORA CON DOM</h1>
+        <main class="contenedor gris">
+            <!-- resultado -->
+            <section class="contenedor-resultado" >
+                <a id="numero">0</a>
+            </section>
+            <section>
+                 <!-- Operadores -->
+                <div class="grid teclas">
+                    <button class="operador" data-action="borrar">AC</button>
+                    <button class="operador" data-action="dividir">÷</button>
+                    <button class="operador" data-action="multiplicar">*</button>
+                    <button class="numeros" >7</button>
+                    <button class="numeros" >8</button>
+                    <button class="numeros" >9</button>
+                    <button class="numeros" >4</button>
+                    <button class="numeros" >5</button>
+                    <button class="numeros" >6</button>
+                    <button class="numeros" >1</button>
+                    <button class="numeros" >2</button>
+                    <button  class="numeros" >3</button>
+                    <button class="operador" data-action="restar">-</button>
+                    <button class="boton-ancho numeros">0</button>
+                    <button data-action="decimal">.</button>
+                    <button data-action="calcular">=</button>
+                    <button data-action="sumar" class="boton-largo">+</button>
+                </div>
+             </section>
+        </main>
+        
+
+    <script src="index.js"></script>
+</body>
+</html>
