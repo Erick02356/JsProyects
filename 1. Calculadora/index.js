@@ -2,7 +2,9 @@
 //QuerySelctor, agregamos un evento que cada ver que se de clic en un de sus elementos hijos podremos ver el contenido
 const teclas= document.querySelector('.teclas')
 const pantalla = document.getElementById('numero')
-
+var numero1 = 0
+var numero2 = 0
+var operacion = ''
 /*El evento addEventListener Solo puede funcionar si es puesto
 en un querySelector o en getElementById. Supongo que no funciona
 en metodos que devuelven un listado de funciones
@@ -27,11 +29,14 @@ teclas.addEventListener('click', e=> {
         
         } else{
             pantalla.textContent=numeroEnPantalla+numeros
-            let numero1 = numeroEnPantalla
           
         }
 
     }
+    /*
+        Busca si el boton presionado es el que lleva por nombre de clase decimal
+        luego mira si el numero no incluye un .  con el metodo includes, procede agregarselo
+    */
     if (claseNumeros == 'decimal'){
         
         if(!pantalla.textContent.includes('.'))
@@ -40,45 +45,65 @@ teclas.addEventListener('click', e=> {
         }else{
             pantalla.textContent=pantalla.textContent
             alert("YA TIENE PUNTO BURRO")
-
         }
     }
+
+    /*
+        Ahora para escoger los operador se rectifica que la clase coincida con las puestas en los botones de 
+        operadores, luego a la variable global "numero1" se le asigna el valor del numero mostrado en pantalla
+        a la variable operacion se le asigna el textContent de la tecla de oprimida
+        y se limpia la pantalla poniendo 0.
+    */
+
     if (claseNumeros == 'operador'  || claseNumeros== 'boton-largo' ){
-        pantalla.textContent =0
-        action.primerValor = pantalla.textContent
-        console.log(action.primerValor)
+        numero1 = pantalla.textContent;
+        operacion = e.target.textContent
+        pantalla.textContent=0;
     }
 
+
+    /* 
+         Al darle el boton calcular se le asigna el numero en pantalla numero2
+         y llamamos a una funcion que haga toda la logica de las operaciones matematicas
+    */
     if (claseNumeros == 'calcular'){       
-        let numero2=numeroEnPantalla
-        guardarNumero(numero2)
-        console.log(guardarNumero)
+        numero2=numeroEnPantalla;
+        realizarOperacion();
     }
   
-
 })
 // Se llama el id del elemento AC para agregar un eventListener el cual
-// cada que se de click automaticamente reiniciara la pantalla en 0
+// cada que se de click automaticamente reiniciara los valores en nulos
 const eliminar = document.getElementById('borrar')
 eliminar.addEventListener('click',x =>{
-   pantalla.textContent=0
-}  )
+    pantalla.textContent=0;
+    numero1 = '';
+    numero2 = '';
+    operacion = '';
+});
 
-function suma (a,b){
-    resultado = parseFloat(a)+ parseFloat(b)
-    console.log(resultado)
-}
-const sumar = document.getElementById('sumar')
-const restar = document.getElementById('restar')
-const multiplicar = document.getElementById('multiplicar')
-const dividir =document.getElementById('dividir')
 
-function guardarNumero(a){
-    operacion=[]
-    operacion.push(a)
-    return operacion
+function realizarOperacion (){
+    let resultado;
+    switch(operacion){
+        case '+':
+            resultado = parseFloat(numero1) + parseFloat(numero2);
+            break;
+        case '-':
+            resultado = parseFloat(numero1) - parseFloat(numero2);
+            break;
+        case '*':
+            resultado = parseFloat(numero1) * parseFloat(numero2);
+            break;
+        case '÷':
+            resultado = parseFloat(numero1) / parseFloat(numero2);
+            break;
+        default:
+            return;
+    }
+    pantalla.textContent = resultado;
+    numero1 = resultado;  // Permite continuar operando con el resultado
+    numero2 = '';
+    operacion = '';
 }
-// const punto = document.getElementById('decimal')
-// punto.addEventListener('click', e=>{
-//     pantalla.textContent=pantalla.textContent+'.'  
-// })
+
