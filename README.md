@@ -1,7 +1,7 @@
 # JsProyects
-Proyectos prácticos para el aprendizaje de JavaScript
+Proyectos prácticos para el aprendizaje de JavaScript, ya llevo meses en el tutorial hell, y es momento de salir. Trataré de realizar estas 10 ideas de proyectos para poder darle un enfoque más practico a mi estudio como programador.
 
-# Proyectos
+# Proyectos (Ideas sacadas de chat gpt)
 
 ##  1).Calculadora básica:
 Crea una calculadora sencilla que pueda realizar operaciones matemáticas básicas como suma, resta, multiplicación y división. Esto te ayudará a entender la manipulación del DOM y la lógica básica.
