@@ -23,3 +23,18 @@ function elMultiplicador(a,b) {
 
 //Si por el contrario la variable no tiene un return, sino que ejecuta algo entonces solo se llama a la funcion
 elMultiplicador(4,3) //12
+
+
+//Arrow function
+
+const saludar = function (nombre) {
+    let frase = `Hola ${nombre} eres un papu`;
+    document.write(frase)
+}
+// ==
+
+const saludo= nombre=>{
+    let frase = `Hola ${nombre} eres un papu`;
+    document.write(frase)
+}
+
