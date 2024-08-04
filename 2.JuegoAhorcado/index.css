@@ -1,0 +1,157 @@
+body{
+    margin: 0;
+    box-sizing: border-box;
+    background-color: #808D7C;
+}
+
+.gameboy{
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items: center;
+    gap: 7rem;
+    background-color: #792ec5;
+    box-sizing: border-box;
+    margin: auto;
+    margin-top: 3rem;
+    width: 500px;
+    height: 80vh;
+    border-left:15px solid #4F1787 ;
+    border-right:2px solid #4F1787;
+    border-top: 5px solid #4F1787;
+    border-bottom-left-radius: 10% ;
+    border-bottom-right-radius: 10% ;
+}
+
+
+.marco{
+    background-color: #4F1787;
+    width: 90%;
+    height: 350px;
+    margin-top: 2rem;
+    border-bottom-left-radius: 20% ;
+    border-bottom-right-radius: 20% ;
+    display: flex;
+    justify-content: center;
+}
+
+.pantalla{
+    background-color: #556f55;
+    width: 80%;
+    height: 250px;
+    align-self: center;
+    position: relative;
+    border-radius: 4px;
+}
+.base{
+    position: absolute;
+    width: 2px;
+    height: 100px;
+    background-color: #000;
+    bottom: 22px;
+    left: 86px;  
+    rotate: 90deg;
+}
+.poste{
+    position: absolute;
+    width: 2px;
+    height: 150px;
+    background-color: #000;
+    top: 27px;
+    left: 87px;
+}
+.brazo{
+    position: absolute;
+    width: 2px;
+    height: 150px;
+    background-color: #000;
+    top: -48px;
+    left: 161px;
+    rotate: 90deg;
+}
+
+.soporte{
+    position: absolute;
+    width: 2px;
+    height: 32px;
+    background-color: #000;
+    top: 22px;
+    left: 100px;
+    rotate: 45deg;
+}
+.lazo{
+    position: absolute;
+    width: 2px;
+    height: 30px;
+    background-color: #000;
+    top:27px;
+    right: 111px;
+}
+.cabeza{
+    position: absolute;
+    background-color: transparent;
+    width: 35px;
+    height:35px;
+    border: 2px solid #000;
+    border-radius: 50%;
+    top: 55px;
+    right: 93px;
+
+}
+.tronco{
+    position: absolute;
+    width: 2px;
+    height: 50px;
+    background-color: #000;
+    top: 93px;
+    right:111px;
+}
+.brazos{
+    position: absolute;
+    width: 2px;
+    height: 35px;
+    background-color: #000;
+    top: 90px;
+    right: 110px;  
+    rotate: 90deg;
+}
+.pierna-izquierda{
+    position: absolute;
+    width: 2px;
+    height: 25px;
+    background-color: #000;
+    bottom: 87px;
+    right: 120px;
+    rotate: 45deg;
+}
+.pierna-derecha{
+    position: absolute;
+    width: 2px;
+    height: 25px;
+    background-color: #000;
+    bottom: 87px;
+    right: 102px;
+    rotate: 135deg;
+}
+
+.teclado{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    height: 40%;
+    font-size: 30px;
+}
+.fila{
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 7px;
+}
+span{
+    background-color: #595f5f;
+    width: 40px;
+    text-align: center;
+    border-radius: 3px;
+    font-family: sans-serif;
+    text-transform: uppercase;
+}
