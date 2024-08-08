@@ -43,6 +43,9 @@ body{
     position: relative;
     border-radius: 4px;
 }
+.stick-man > *{
+    display: none;
+}
 .base{
     position: absolute;
     width: 2px;
@@ -133,7 +136,12 @@ body{
     right: 102px;
     rotate: 135deg;
 }
+.adivina{
+    position: absolute;
+    bottom: 5px;
+    left: 100px;
 
+}
 .teclado{
     display: flex;
     flex-direction: column;
@@ -147,7 +155,7 @@ body{
     flex-wrap: nowrap;
     gap: 7px;
 }
-span{
+.fila > *{
     background-color: #595f5f;
     width: 40px;
     text-align: center;

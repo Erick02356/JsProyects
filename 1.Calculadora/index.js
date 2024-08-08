@@ -16,6 +16,7 @@ teclas.addEventListener('click', e=> {
     2) Poder agregar correctamente los numeros en la pantalla de 
        resultado
     */
+
     const claseNumeros = e.target.className
     const numeros = e.target.textContent
     const numeroEnPantalla = pantalla.textContent
@@ -71,7 +72,7 @@ teclas.addEventListener('click', e=> {
         realizarOperacion();
     }
   
-})
+});
 // Se llama el id del elemento AC para agregar un eventListener el cual
 // cada que se de click automaticamente reiniciara los valores en nulos
 const eliminar = document.getElementById('borrar')
