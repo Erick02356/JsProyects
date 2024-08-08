@@ -17,3 +17,12 @@ La interfaz debe contar con tres partes{
 - Al finalizar satisfactoriamente mostrar mensaje de felicitación
 
 - Al finalizar por errores mensaje de Game over
+# Pasos para el JavaScript
+¿Que necesita hacer?
+1) Detectar de manera correcta las diferentes letras oprimidas
+2) Almacenar las palabras del juego
+3) Mostrar los espacion a rellenar o de las letras de la palabra a adivinar
+4) Mostrar parte por parte del muñeco al equivocarse
+5) Mensaje de felitacion o de game over
+6) Reinicio de partida con nueva palabra
+   
