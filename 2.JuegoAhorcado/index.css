@@ -39,9 +39,10 @@ body{
     background-color: #556f55;
     width: 80%;
     height: 250px;
-    align-self: center;
     position: relative;
     border-radius: 4px;
+    display: flex;
+    align-items: flex-end;
 }
 .stick-man > *{
     display: none;
@@ -136,12 +137,7 @@ body{
     right: 102px;
     rotate: 135deg;
 }
-.adivina{
-    position: absolute;
-    bottom: 5px;
-    left: 100px;
 
-}
 .teclado{
     display: flex;
     flex-direction: column;
@@ -150,6 +146,17 @@ body{
     height: 40%;
     font-size: 30px;
 }
+
+.inferior{
+    width: 100%;
+    height: 40px;
+    min-height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    font-size: 1.4rem;
+}
+
 .fila{
     display: flex;
     flex-wrap: nowrap;
