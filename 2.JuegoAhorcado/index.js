@@ -21,18 +21,25 @@ palabra.innerHTML=espacios.join('');
 const palabraAdivinar = Array.from(palabras[numeroPalabraAdivinar])
 
 letras.addEventListener('click', e=> {
+/*
+
+
+
+*/  
     const letra = e.target.textContent
     //console.log(letra)
+    let contador=1
     for (let index = 0; index < intentos; index++) {
-        
         if (palabraAdivinar[index] == letra) {
             espacios[index]=letra
-            palabra.innerHTML=espacios.join('');
+            palabra.innerHTML=espacios.join(' ');
             // console.log('Si es')
         } else { 
-            // console.log('No es')            
+            const erroneo = document.getElementById(contador)
+            erroneo.classList.remove('oculto');
+            console.log(contador)
+            contador+=1
         }
-        
     }
 });
 

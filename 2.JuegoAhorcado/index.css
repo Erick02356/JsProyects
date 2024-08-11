@@ -44,8 +44,9 @@ body{
     display: flex;
     align-items: flex-end;
 }
-.stick-man > *{
+.oculto{
     display: none;
+
 }
 .base{
     position: absolute;
@@ -55,6 +56,7 @@ body{
     bottom: 22px;
     left: 86px;  
     rotate: 90deg;
+    
 }
 .poste{
     position: absolute;
@@ -155,6 +157,10 @@ body{
     justify-content: center;
     align-items: end;
     font-size: 1.4rem;
+}
+
+.palabra{
+    text-decoration:none  ;
 }
 
 .fila{
