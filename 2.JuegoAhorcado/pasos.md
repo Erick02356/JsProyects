@@ -12,5 +12,13 @@ La interfaz debe contar con tres partes{
 3) Mostrar los espacion a rellenar o de las letras de la palabra a adivinar
 4) Mostrar parte por parte del muñeco al equivocarse
 5) Mensaje de felitacion o de game over
-6) Reinicio de partida con nueva palabra
+6) Reinicio de partida con nueva palabra {
+    Para esto puedo 
+    - Agregar palabras 
+    - Agregar botones a los lados que cambien las palabras
+    - Boton para reiniciar 
+    - Boton para escoger una palabra de manera aleatoria
+    
+
+}
    

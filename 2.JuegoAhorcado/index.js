@@ -1,10 +1,10 @@
-const palabras = ['perro']
+const palabras = ['perro','casa']
 const letras = document.querySelector('.teclado')
 
-/*Esta variable se hace con el fin de que el usuario pueda 
+/*Esta variable se hace con el fin de que el usuario pueda
 de manera dinamica escoger que palabra quiere adiviar del
 banco de palabras*/
-let numeroPalabraAdivinar=0
+let numeroPalabraAdivinar=1
 //console.log(letras)
 
 const espacios = []
@@ -19,27 +19,50 @@ palabra.innerHTML=espacios.join('');
 //console.log(element)
 // console.log()
 const palabraAdivinar = Array.from(palabras[numeroPalabraAdivinar])
-
+var contador=1
 letras.addEventListener('click', e=> {
-/*
 
+    if (e.target.tagName === 'SPAN') {
+        const letra = e.target.textContent;
 
-
-*/  
-    const letra = e.target.textContent
-    //console.log(letra)
-    let contador=1
-    for (let index = 0; index < intentos; index++) {
-        if (palabraAdivinar[index] == letra) {
-            espacios[index]=letra
-            palabra.innerHTML=espacios.join(' ');
-            // console.log('Si es')
-        } else { 
+        if (palabraAdivinar.includes(letra)){
+            console.log(letra)
+            for (let i = 0; i < palabras[numeroPalabraAdivinar].length; i++){
+                if (palabraAdivinar[i] == letra) {
+                            espacios[i]=letra
+                            palabra.innerHTML=espacios.join(' ');
+                } 
+            }  
+        } else {
             const erroneo = document.getElementById(contador)
             erroneo.classList.remove('oculto');
             console.log(contador)
             contador+=1
+
         }
+    }
+    
+    if (!espacios.includes(' _ ')) {
+        modal.style.display = "block";
+        contenidoModel.innerHTML= `Felicidades adivinaste la palabra y era ${espacios.join('')}`
+    }else if (contador>10){
+        modal.style.display = "block";
+        contenidoModel.innerHTML= `Perdiste, adivinaste la palabra y era ${palabras[numeroPalabraAdivinar]}`
     }
 });
 
+
+//Modal
+let contenidoModel = document.getElementById('contenido')
+let modal= document.getElementById("myModal");
+let span = document.getElementsByClassName("close")[0];
+span.onclick = () =>{
+    modal.style.display = "none";
+
+  }
+
+  window.onclick = (e)=> {
+    if (e.target == modal) {
+      modal.style.display = "none";
+    }
+}
