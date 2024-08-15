@@ -47,7 +47,7 @@ letras.addEventListener('click', e=> {
         contenidoModel.innerHTML= `Felicidades adivinaste la palabra y era ${espacios.join('')}`
     }else if (contador>10){
         modal.style.display = "block";
-        contenidoModel.innerHTML= `Perdiste, adivinaste la palabra y era ${palabras[numeroPalabraAdivinar]}`
+        contenidoModel.innerHTML= `Perdiste, no adivinaste la palabra y esta era ${palabras[numeroPalabraAdivinar]}`
     }
 });
 
