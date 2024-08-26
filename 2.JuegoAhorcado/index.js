@@ -1,10 +1,10 @@
-const palabras = ['perro','casa']
+const palabras = ['perro','casa','javascript','mongodb']
 const letras = document.querySelector('.teclado')
 
 /*Esta variable se hace con el fin de que el usuario pueda
 de manera dinamica escoger que palabra quiere adiviar del
 banco de palabras*/
-let numeroPalabraAdivinar=1
+let numeroPalabraAdivinar=3
 //console.log(letras)
 
 const espacios = []
@@ -20,6 +20,8 @@ palabra.innerHTML=espacios.join('');
 // console.log()
 const palabraAdivinar = Array.from(palabras[numeroPalabraAdivinar])
 var contador=1
+const intentoPantalla= document.getElementById('intentos')
+intentoPantalla.innerText=`${intentos} `
 letras.addEventListener('click', e=> {
 
     if (e.target.tagName === 'SPAN') {
@@ -65,4 +67,21 @@ span.onclick = () =>{
     if (e.target == modal) {
       modal.style.display = "none";
     }
+}
+
+function anteriorPalabra(palabra){
+    if (palabra === 0){
+        console.log('No sirve');
+    }else{
+        palabra=palabra-1;
+        numeroPalabraAdivinar=palabra
+    }
+
+
+}
+
+function reiniciar() {
+    for (let i = 0; i < palabras[numeroPalabraAdivinar].length; i++) {
+        espacios.push(' _ ')
+    } 
 }

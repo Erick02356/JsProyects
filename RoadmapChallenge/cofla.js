@@ -130,4 +130,3 @@ const apps = [
 for (let i = 0; i < apps.length; i++) {
     document.write(`${apps[i].appInfo()}<br>`);
 }
-

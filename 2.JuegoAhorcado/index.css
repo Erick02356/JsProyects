@@ -11,7 +11,6 @@ body{
     flex-direction: column;
     justify-content:flex-start;
     align-items: center;
-    gap: 7rem;
     background-color: #792ec5;
     box-sizing: border-box;
     margin: auto;
@@ -22,7 +21,8 @@ body{
     border-right:2px solid #4F1787;
     border-top: 5px solid #4F1787;
     border-bottom-left-radius: 10% ;
-    border-bottom-right-radius: 10% ;
+    border-bottom-right-radius: 10%;
+    gap:1rem;
 }
 
 
@@ -45,6 +45,7 @@ body{
     border-radius: 4px;
     display: flex;
     align-items: flex-end;
+    margin-top: 2rem;
 }
 .oculto{
     display: none;
@@ -219,3 +220,19 @@ body{
     text-align: center;
     font-size: 2em;
   }
+.botones{
+    display: flex;
+    padding-bottom: 1rem;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+.btn{
+    background-color: #4F1787;
+    border:none;
+    text-align: center;
+    text-decoration: none;
+    font-size: 26px;
+
+}
